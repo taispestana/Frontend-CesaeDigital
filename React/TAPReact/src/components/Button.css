@@ -1,0 +1,8 @@
+button {
+    padding: 0.6em 2.5em;
+    background-color: violet;
+}
+
+button:hover{
+    background-color: rgba(238, 130, 238, 0.853);
+}

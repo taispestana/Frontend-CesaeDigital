@@ -1,11 +1,9 @@
-//Criando função que é um componente e chamando objeto
-function Card(props){
+// Por defeito vai assumir o silva e programador
+export default function Card({firstName, lastName='Silva', title='Programador'}){
   return(
        <div className="card">
-          <p>{props.firstName} {props.lastName}</p> 
-          <p>{props.title}</p>
+          <p>{firstName} {lastName}</p> 
+          <p>{title}</p>
           </div> 
   )
 };
-
-export default Card;
