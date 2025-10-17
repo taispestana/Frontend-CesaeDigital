@@ -9,6 +9,8 @@ import userData from './data/userData'
 import objectvs from './data/objectivs'
 import { CourseGoal } from './components/CourseGoal'
 import course from './data/course'
+import { Button } from './components/Button'
+import Login from './components/Login'
 
 let mySubject = "React";
 
@@ -27,9 +29,19 @@ let product = {
   color: 'amarelo'
 };
 
-
 function App() {
   const [count, setCount] = useState(0)
+
+  let chosenSubject = 'Escolha a matéria';
+
+  function alertPayDate(){
+    alert('Atenção à data de pagamento!')
+  }
+
+  function getSubject(subject){
+    alert('matéria completa de ' + subject);
+    chosenSubject = subject;
+  }
 
   return (
     <>
@@ -59,9 +71,24 @@ function App() {
    lastName = 'Silva'
    title = 'Gestor'/>
     <Card {...userData}/>
+
+    <Button functionForClick={alertPayDate}>Submeter</Button>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <h3>Eventos Dinamicos</h3>
+      <menu>
+        <Button functionForClick={() => getSubject('JS')}>Materia JS</Button>
+        <Button functionForClick={() => getSubject('React')}>Materia React</Button>
+        <Button functionForClick={() => getSubject('SQL')}>Materia SQL</Button>
+        <div>
+          {chosenSubject}
+        </div>
+
+        <Login>
+        </Login>
+      </menu>
     </>
   )
 }
