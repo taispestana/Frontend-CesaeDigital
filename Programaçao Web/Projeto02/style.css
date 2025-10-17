@@ -44,7 +44,6 @@ section {
   scroll-margin-top: 80px; /* Ajuste conforme a altura da sua navbar */
 }
 
-
 /*HEADER*/
 header img {
   max-height: 80vh;
@@ -76,6 +75,11 @@ header img {
   height: 40px;
 }
 
+/* Diminui a altura do carrossel */
+.carousel-item img {
+  height: 60vh; /* 60% da altura da tela — ajuste à vontade */
+  object-fit: cover; /* mantém a imagem centralizada e cortada proporcionalmente */
+}
 
 /*HOME*/
 #inicio {
@@ -170,7 +174,6 @@ header img {
   filter: invert(18%) sepia(72%) saturate(1835%) hue-rotate(197deg) brightness(93%) contrast(95%);
 }
 
-
 #beneficios h5 {
   color: #003366;
   font-weight: 600;
@@ -217,6 +220,38 @@ header img {
   color: #66b2ff;
 }
 
+/*DESTINOS*/
+#destinos h2 {
+  color: #003366;
+  font-weight: 700;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: #003366;
+  font-weight: 600;
+}
+
+.card .btn-primary {
+  background-color: #003366;
+  border: none;
+}
+
+.card .btn-primary:hover {
+  background-color: #00264d;
+}
+
 /*SOBRE*/
 #sobre {
   background-color: #f5f8fc;
@@ -233,7 +268,7 @@ header img {
   line-height: 1.8;
 }
 
-/* CONTACTO*/
+/*CONTACTO*/
 #contacto h2 {
   color: #003366;
   font-weight: 700;
@@ -296,3 +331,7 @@ footer {
   }
 
 }
+
+  .card {
+    margin-bottom: 1.5rem;
+  }
