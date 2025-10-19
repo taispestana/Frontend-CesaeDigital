@@ -20,9 +20,15 @@ body {
 }
 
 .nav-link {
+  position: relative;
   color: #003366 !important;
   font-weight: 500;
   transition: color 0.3s;
+  padding-bottom: 4px;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #66b2ff;
 }
 
 .nav-link:hover {
@@ -36,12 +42,12 @@ body {
 }
 
 .navbar .btn-primary:hover {
-  background-color: #00264d;
   transform: scale(1.05);
 }
 
 section {
-  scroll-margin-top: 80px; /* Ajuste conforme a altura da sua navbar */
+  scroll-margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 /*HEADER*/
@@ -50,22 +56,18 @@ header img {
   object-fit: cover;
 }
 
-
 .carousel-item img {
-  height: 60vh; 
-  object-fit: cover; 
+  height: 60vh;
+  object-fit: cover;
 }
 
 .carousel-control-prev {
   left: 0 !important;
+  width: 5%;
 }
 
 .carousel-control-next {
   right: 0 !important;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
   width: 5%;
 }
 
@@ -73,12 +75,6 @@ header img {
 .carousel-control-next-icon {
   width: 40px;
   height: 40px;
-}
-
-/* Diminui a altura do carrossel */
-.carousel-item img {
-  height: 60vh; /* 60% da altura da tela — ajuste à vontade */
-  object-fit: cover; /* mantém a imagem centralizada e cortada proporcionalmente */
 }
 
 /*HOME*/
@@ -171,7 +167,8 @@ header img {
 }
 
 .icon-azul {
-  filter: invert(18%) sepia(72%) saturate(1835%) hue-rotate(197deg) brightness(93%) contrast(95%);
+  filter: invert(18%) sepia(72%) saturate(1835%) hue-rotate(197deg)
+    brightness(93%) contrast(95%);
 }
 
 #beneficios h5 {
@@ -220,38 +217,6 @@ header img {
   color: #66b2ff;
 }
 
-/*DESTINOS*/
-#destinos h2 {
-  color: #003366;
-  font-weight: 700;
-}
-
-.card {
-  border: none;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-.card-title {
-  color: #003366;
-  font-weight: 600;
-}
-
-.card .btn-primary {
-  background-color: #003366;
-  border: none;
-}
-
-.card .btn-primary:hover {
-  background-color: #00264d;
-}
-
 /*SOBRE*/
 #sobre {
   background-color: #f5f8fc;
@@ -296,12 +261,6 @@ header img {
   transform: scale(1.05);
 }
 
-/*LOCALIZACAO*/
-#localizacao h2 {
-  color: #003366;
-  font-weight: 700;
-}
-
 /*FOOTER*/
 footer {
   background-color: #003366;
@@ -329,9 +288,9 @@ footer {
   .card {
     margin-bottom: 1.5rem;
   }
-
 }
-
-  .card {
-    margin-bottom: 1.5rem;
+@media (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center;
   }
+}

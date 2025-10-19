@@ -12,8 +12,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#destinos">Destinos</a></li>
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="btn btn-primary ms-2" href="#contacto">Contacto</a></li>
@@ -74,8 +75,10 @@
         Viaje com conforto e praticidade — nós cuidamos de tudo para você.
         De praias paradisíacas a aventuras nas montanhas, temos o pacote perfeito para cada viajante.
       </p>
-      <a href="#destinos" class="btn btn-primary me-2">Ver Destinos</a>
-      <a href="#contacto" class="btn btn-outline-primary">Solicitar Orçamento</a>
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
+        <a href="#destinos" class="btn btn-primary me-2">Ver Destinos</a>
+        <a href="#contacto" class="btn btn-outline-primary">Solicitar Orçamento</a>
+      </div>
     </div>
   </section>
 
@@ -139,10 +142,10 @@
           <p>Selecionamos hospedagens de qualidade e experiências inesquecíveis em cada destino.</p>
         </div>
         <div class="col-md-4 mb-4 text-center">
-  <img src="imagens/piggy-bank.svg" alt="Ícone preço" width="70" class="icon-azul">
-  <h5 class="mt-3">Melhor Custo-Benefício</h5>
-  <p>Pacotes personalizados com preços justos e opções de parcelamento facilitadas.</p>
-</div>
+          <img src="imagens/piggy-bank.svg" alt="Ícone preço" width="70" class="icon-azul">
+          <h5 class="mt-3">Melhor Custo-Benefício</h5>
+          <p>Pacotes personalizados com preços justos e opções de parcelamento facilitadas.</p>
+        </div>
         <div class="col-md-4 mb-4">
           <img src="imagens/people-fill.svg" alt="Ícone suporte" width="70" class="icon-azul">
           <h5 class="mt-3">Suporte 24h</h5>
@@ -226,83 +229,82 @@
     </div>
   </section>
 
-<section id="contacto" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Contacto</h2>
+  <section id="contacto" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contacto</h2>
 
-    <div class="row">
-      <!-- Formulário de contato -->
-      <div class="col-md-6 mb-4">
-        <form>
-          <div class="mb-3">
-            <label for="email" class="form-label">Seu email</label>
-            <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" required>
-          </div>
-          <div class="mb-3">
-            <label for="mensagem" class="form-label">Sua mensagem</label>
-            <textarea class="form-control" id="mensagem" placeholder="Escreva sua mensagem" rows="6" required></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
-          </div>
-        </form>
-      </div>
+      <div class="row">
+        <!-- Formulário de contato -->
+        <div class="col-md-6 mb-4">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Seu email</label>
+              <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="mensagem" class="form-label">Sua mensagem</label>
+              <textarea class="form-control" id="mensagem" placeholder="Escreva sua mensagem" rows="6" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+            </div>
+          </form>
+        </div>
 
-      <!-- Mapa do Google Maps -->
-      <div class="col-md-6 mb-4">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24126.57667726893!2d-8.513470801789781!3d40.89771745977056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2381fb79f6fc9b%3A0x439be81ba6cb864a!2zU8OjbyBKb8OjbyBkYSBNYWRlaXJh!5e0!3m2!1spt-BR!2spt!4v1760387471344!5m2!1spt-BR!2spt" 
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <!-- Mapa do Google Maps -->
+        <div class="col-md-6 mb-4">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24126.57667726893!2d-8.513470801789781!3d40.89771745977056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2381fb79f6fc9b%3A0x439be81ba6cb864a!2zU8OjbyBKb8OjbyBkYSBNYWRlaXJh!5e0!3m2!1spt-BR!2spt!4v1760387471344!5m2!1spt-BR!2spt" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="bg-dark-blue text-white pt-5 pb-3">
-  <div class="container">
-    <div class="row">
+  <footer class="bg-dark-blue text-white pt-5 pb-3">
+    <div class="container text-center text-md-start">
+      <div class="row">
 
-      <!-- Sobre a agência -->
-      <div class="col-md-4 mb-4">
-        <h5>Mundo & Destinos</h5>
-        <p>Transformamos viagens em experiências inesquecíveis, cuidando de todos os detalhes para que você aproveite cada momento.</p>
-      </div>
-
-      <!-- Links rápidos -->
-      <div class="col-md-4 mb-4">
-        <h5>Links Rápidos</h5>
-        <ul class="list-unstyled">
-          <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
-          <li><a href="#destinos" class="text-white text-decoration-none">Destinos</a></li>
-          <li><a href="#sobre" class="text-white text-decoration-none">Sobre</a></li>
-          <li><a href="#contacto" class="text-white text-decoration-none">Contacto</a></li>
-        </ul>
-      </div>
-
-      <!-- Contato e redes sociais -->
-      <div class="col-md-4 mb-4">
-        <h5>Contacto</h5>
-        <p>Email: contato@mundodestinos.com</p>
-        <p>Telefone: +351 584 651 327</p>
-        <div class="mt-2">
-          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+        <!-- Sobre a agência -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">Mundo & Destinos</h5>
+          <p>Transformamos viagens em experiências inesquecíveis, cuidando de todos os detalhes para que você aproveite cada momento.</p>
         </div>
+
+        <!-- Links rápidos -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">Links Rápidos</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home" class="text-white text-decoration-none d-block py-1">Home</a></li>
+            <li><a href="#destinos" class="text-white text-decoration-none d-block py-1">Destinos</a></li>
+            <li><a href="#sobre" class="text-white text-decoration-none d-block py-1">Sobre</a></li>
+            <li><a href="#contacto" class="text-white text-decoration-none d-block py-1">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato e redes sociais -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold">Contacto</h5>
+          <p class="mb-1">Email: contacto@mundodestinos.com</p>
+          <p>Telefone: +351 584 651 327</p>
+          <div class="mt-3 d-flex justify-content-center justify-content-md-start">
+            <a href="https://www.facebook.com/" target="_blank" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank" class="text-white fs-5"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+
       </div>
 
-    </div>
+      <hr class="border-light">
 
-    <hr class="border-light">
-
-    <!-- Copyright -->
-    <div class="text-center mt-3">
-      <p class="mb-0">© 2025 Mundo & Destinos — Todos os direitos reservados.</p>
+      <!-- Copyright -->
+      <div class="text-center mt-3">
+        <p class="mb-0">© 2025 Mundo & Destinos — Todos os direitos reservados.</p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 
